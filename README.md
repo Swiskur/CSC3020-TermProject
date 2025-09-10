@@ -1,1 +1,1 @@
-# CSC3020-TermProject
+Schaefer Wiskur - Modern Technologies CSC 3020
