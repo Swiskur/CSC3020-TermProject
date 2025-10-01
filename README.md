@@ -10,3 +10,11 @@ https://my-team-g18b7mh9.atlassian.net/jira/software/projects/SCRUM/summary
 
 
 Placeholder: Set up instructions
+
+
+
+
+Milestone 2: Added Docker setup. See Confluence for details.
+
+
+https://my-team-g18b7mh9.atlassian.net/wiki/x/AQC
