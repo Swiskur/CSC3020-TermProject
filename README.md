@@ -18,3 +18,11 @@ Milestone 2: Added Docker setup. See Confluence for details.
 
 
 https://my-team-g18b7mh9.atlassian.net/wiki/x/AQC
+
+
+
+
+Milestone 3: Explored AI-assisted tools for project documentation and design
+
+
+Confluence Link - https://my-team-g18b7mh9.atlassian.net/wiki/pages/resumedraft.action?draftId=21430273&draftShareId=7f62073c-2ce6-41a9-95c8-8ead95477bec 
