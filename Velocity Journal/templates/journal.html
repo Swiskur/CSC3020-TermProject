@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Journal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+
+
+<body class="fieldborder">
+    <h1>Journal</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('velocity_tracker') }}">Velocity Tracker</a></li>
+                <li><a href="{{ url_for('journal_tracker') }}">Journal Entries</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <section>
+            <h2>Journal Entries</h2>
+            <article>
+            <p>Use the Velocity Journal to help track your progress and reflect on your training sessions. Enter in the date and all of the details of your training in the journal entry field, so you can revisit and see your progress over time.</p>
+            </article>
+        </section>
+        <br>
+        
+        <form method="POST" action="{{ url_for('journal_tracker') }}">
+            <label for="journalDate">Date:</label>
+            <input type="date" id="journalDate" name="journalDate"><br><br>
+            <label for="journalEntry">Journal Entry:</label><br>
+            <textarea id="journalEntry" name="journalEntry" rows="10" cols="50" placeholder="Write your journal entry here..."></textarea><br><br>
+            <button type="submit">Save Entry</button>
+        </form>
+        <table id="journalTable" border="1" style="margin-top:20px; width:80%; text-align:center; margin-left: 300px;">
+            <tr>
+                <th>Date</th>
+                <th>Journal Entry</th>
+            </tr>
+            {% for entry in journal_entries %}
+            <tr>
+                <td>{{ entry.date }}</td>
+                <td>{{ entry.entry }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Velocity Journal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

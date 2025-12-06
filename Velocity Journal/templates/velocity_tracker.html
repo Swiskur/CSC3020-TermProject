@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Journal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+
+
+<body class="fieldborder">
+    <h1>Velocity Tracker</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('velocity_tracker') }}">Velocity Tracker</a></li>
+                <li><a href="{{ url_for('journal_tracker') }}">Journal Entries</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <section>
+            <h2>Velocity Tracker</h2>
+            <article>
+            <p>Use the Velocity Tracker to log your speed and monitor your progress over time. Input your velocity data and visualize your improvements with our easy-to-use interface.</p>
+            </article>
+        </section>
+        <br>
+        <form action="{{ url_for('velocity_tracker') }}" method="POST">
+            <input type="date" id="date" name="date">
+            <input type="number" id="velocity" name="velocity" placeholder="Enter Velocity (mph)">
+            <button type="submit">Add Entry</button>
+        </form>
+        <table id="velocityTable" border="1" style="margin-top:20px; width:50%; text-align:center;">
+            <tr>
+                <th>Date</th>
+                <th>Velocity (mph)</th>
+            </tr>
+            {% for v in velocity %}
+            <tr>
+                <td>{{ v.date }}</td>
+                <td>{{ v.velocity }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Velocity Journal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
