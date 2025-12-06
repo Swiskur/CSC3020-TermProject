@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Journal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+
+
+<body class = "fieldborder">
+    <h1>Velocity Journal</h1>
+    <header>
+        <nav>
+        
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('velocity_tracker') }}">Velocity Tracker</a></li>
+                <li><a href="{{ url_for('journal_tracker') }}">Journal Entries</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <section>
+            <h2 class="center">About Velocity Journal</h2>
+            <article>
+            <p>The velocity journal is used to help pitchers track their throwing speed and document their progress over time. 
+                Our goal is to help athletes improve their performance and reach their full potential on the mound.
+                This page is free to use to provide a place for athletes of any age or skill level to track their velocity and journal about their journey. 
+                Whether you're a beginner looking to improve your skills or an experienced pitcher aiming to reach new heights, the velocity journal is here to support you along the way 
+                and help you achieve your goals! Who knows, maybe one day you'll be throwing heat like Jacob deGrom is here below!
+            </p>
+            </article>
+        </section>
+        <br>
+        <section>
+            <h2 class="center">Get Started</h2>
+            <p>Use the Velocity Tracker to log your speed for each day you are radar gunned. This way you can see your progression.
+                Then, you can reate journal entries to reflect on your progress as you climb to the top of your pitching staff!
+                Use these journal entries to note what drills you did that day, how you felt, and any other observations you made during your training.
+                And it's that easy and free to use!
+            </p>
+            <a href = "{{ url_for('velocity_tracker') }}">
+            <button type="button" class="center">Go To Velocity Tracker</button>
+            </a>
+        </section>
+        <img src = "https://www.nj.com/resizer/OsjBpMm9YZgw0vK24mJT-5sq4Mw=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/S7BEL6YPSNDSPO4BT7ZPYSDVYE.jpg" alt = "Baseball Pitcher">
+        <img src = "https://baseballxgear.com/wp-content/uploads/2017/07/90-mph.jpg" alt = "Baseball Radar Gun" style="margin-left:400px;">
+        <br>
+    </main>
+    <footer>
+        <p>&copy; 2024 Velocity Journal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
