@@ -39,4 +39,4 @@ Link to Web Application https://velocity-journal.onrender.com
 
 Video Link - https://youtu.be/nA_G3OkIaeg
 
-Confluence link - 
+Confluence link - https://my-team-g18b7mh9.atlassian.net/wiki/x/AQDxAQ 
